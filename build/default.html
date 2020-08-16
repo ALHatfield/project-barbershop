@@ -61,9 +61,27 @@
   </style></head>
 
 <body>
-  <div>
-    project barbershop
-  </div>
+  <nav>
+    <div class="container">
+      <div class="navbar-logo">
+        <img src="https://via.placeholder.com/160x80" alt="">
+      </div>
+      <ul class="navbar">
+        <li class="navbar-link">link1</li>
+        <li class="navbar-link">link2</li>
+        <li class="navbar-link">link3</li>
+      </ul>
+    </div>
+  </nav>
+  <slider>
+    <div class="container">
+
+      <h3>Welcome to mustache barbershop</h3>
+      <h3>{{views}}</h3>
+
+    </div>
+  </slider>
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"></script>
@@ -74,9 +92,12 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
   
-  <script>
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <script src="index.js"></script>
   
+  <script>
       window.onload = function () {
+          /*
           var link = document.createElement("link");
           link.setAttribute("rel", "stylesheet");
           link.setAttribute("type", "text/css");
@@ -86,6 +107,7 @@
           var script = document.createElement("script");
           script.setAttribute("src", "index.js");
           document.getElementsByTagName("head")[0].appendChild(script);
+          */
       }
   </script></body>
 

@@ -71,6 +71,26 @@ module.exports = function (grunt) {
         }, ],
       },
     },
+
+    open: {
+      dev: {
+        path: "http://127.0.0.1:8888/build",
+        app: "Firefox",
+      },
+    },
+
+    watch: {
+      all: {
+        files: ["src/**/*"],
+        tasks: [
+          "clean:default",
+          "copy:default",
+          "assemble:dev",
+          "dart-sass",
+          "watch:all",
+        ],
+      },
+    },
   });
 
   // ===========================================================================
@@ -83,11 +103,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-dart-sass");
-  // grunt.loadNpmTasks("grunt-contrib-jshint");
-  // grunt.loadNpmTasks("grunt-contrib-uglify");
-  // grunt.loadNpmTasks("grunt-contrib-less");
-  // grunt.loadNpmTasks("grunt-contrib-cssmin");
-  // grunt.loadNpmTasks("grunt-contrib-watch");
+  // grunt.loadNpmTasks("grunt-open"); // not working ??
+  grunt.loadNpmTasks("grunt-contrib-watch");
 
   // Register task default to grunt
   grunt.registerTask("default", [
@@ -95,5 +112,7 @@ module.exports = function (grunt) {
     "copy:default",
     "assemble:dev",
     "dart-sass",
+    // "open:dev",
+    "watch:all",
   ]);
 };

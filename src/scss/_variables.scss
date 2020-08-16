@@ -1,1 +1,64 @@
-$color-1: #eeaabb;
+////////////////////////////////////////////////
+/*  Color Profile */
+$bg1: WHEAT;
+$bg2: WHITESMOKE;
+$color1: #333;
+$color2: TOMATO;
+
+.theme-1 {
+  color: $color1;
+  background-color: $bg1;
+}
+
+.color-1 {
+  color: $color1;
+}
+
+.color-2 {
+  color: $color2;
+}
+
+////////////////////////////////////////////////
+/* Element Variables */
+$nav-height: 80px;
+
+////////////////////////////////////////////////
+/*  View Width */
+$breakpoint_tablet: 576px;
+$breakpoint_desktop: 991px;
+
+/*  Responsive Mixin */
+@mixin min-width-Desktop {
+  @media (min-width: $breakpoint_desktop) {
+    font-family: Arial, Helvetica;
+    font-size: 18px;
+
+    .container {
+      margin: auto;
+      width: $breakpoint_desktop;
+    }
+  }
+}
+
+@mixin min-width-Tablet {
+  @media (min-width: $breakpoint_tablet) {
+    font-family: Arial, Helvetica;
+    font-size: 16px;
+
+    .container {
+      margin: auto;
+      width: $breakpoint_tablet;
+    }
+  }
+}
+
+@mixin Mobile {
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+
+
+  .container {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}

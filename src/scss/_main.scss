@@ -1,3 +1,59 @@
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 2.6rem;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+h3 {
+    color: $color2;
+    font-size: 1.25em;
+    line-height: 2rem;
+}
+
+///////////////////////////////////////
 body {
-    background-color: $color-1;
+    @include Mobile;
+    @include min-width-Tablet;
+    @include min-width-Desktop;
+
+    letter-spacing: 0px;
+    line-height: 1.7em;
+    word-spacing: 0.3em;
+    background-color: $bg2;
+    color: $color1;
+
+}
+
+nav {
+    background-color: $bg1;
+    height: $nav-height;
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 100%;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: $nav-height;
+    }
+
+    .navbar-logo {
+        display: inline-block;
+        float: left;
+        height: $nav-height;
+        width: 160px;
+    }
+
+    .navbar-link {
+        display: inline-block;
+        padding-left: calc(5% + 5px);
+    }
 }

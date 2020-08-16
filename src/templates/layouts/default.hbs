@@ -6,9 +6,29 @@
 </head>
 
 <body>
-  <div>
-    project barbershop
-  </div>
+  {{!-- top nav --}}
+  <nav>
+    <div class="container">
+      <div class="navbar-logo">
+        <img src="https://via.placeholder.com/160x80" alt="">
+      </div>
+      <ul class="navbar">
+        <li class="navbar-link">link1</li>
+        <li class="navbar-link">link2</li>
+        <li class="navbar-link">link3</li>
+      </ul>
+    </div>
+  </nav>
+  {{!-- views/page container --}}
+  <slider>
+    <div class="container">
+
+      <h3>Welcome to mustache barbershop</h3>
+      <h3>\{{views}}</h3>
+
+    </div>
+  </slider>
+
   {{> scripts}}
 </body>
 
